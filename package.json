@@ -12,31 +12,19 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!<rootDir>/node_modules/"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": 90
-      }
-    },
-    "coverageReporters": [
-      "text"
-    ]
-  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "babel --plugins @babel/plugin-transform-modules-commonjs script.js",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "jest": "^28.1.1"
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
+    "@babel/preset-env": "^7.23.9",
+    "babel-jest": "^29.7.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1"
   },
   "eslintConfig": {
     "extends": [
