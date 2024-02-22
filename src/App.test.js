@@ -1,5 +1,8 @@
+import React from 'react';
+import '@testing-library/jest-dom';
 import { render, fireEvent, screen } from "@testing-library/react";
 import App from "./App";
+import './App.css';
 
 test("renders app", () => {
   render(<App />);
